@@ -28,9 +28,9 @@
     <div class="row">
         <div class="col-lg-1 text-center">
             <div id="pagewrap">
-                <svg version='1.1' class="clicked" x='0px' y='0px' width='307px' height='283px' id='rocket'>
-                    <circle class='icon-circle' cx='147.5' cy='138.6' r='105.5' />
-                    <g class='rocket-inner'>
+                <svg version='1.1' class="clicked rotate" x='0px' y='0px' width='307px' height='283px' id='rocket'>
+                    <circle class='icon-circle' cx='147.5' cy='138.6' r='105.5'/>
+                    <g class='rocket-inner '>
                         <path class='fire' id='fire-middle'
                               d='M148.891,179.906c3.928,0,7.111,3.176,7.111,7.094 c0,7.78-7.111,16-7.111,16s-7.111-8.349-7.111-16C141.78,183.082,144.963,179.906,148.891,179.906z'/>
 
@@ -78,18 +78,19 @@
         <div class="col-lg-10 text-center">
             <h1>Days to Mayhem</h1>
             <br/>
+
             <div id="clock"></div>
         </div>
-        <!--<div class="col-lg-1 text-center">
+        <div class="col-lg-12 text-center">
             <canvas id="base" class="chart-base" chart-type="type" data="data"
                     labels="labels" legend="true"></canvas>
-        </div>-->
-    </div>
-    <div class="row">
-        <div class="col-lg-12 text-center">
-            <iframe src="http://duckshoot.toasterltd.com/client/"  width="985" height="500"></iframe>
         </div>
     </div>
+    <!-- <div class="row">
+         <div class="col-lg-12 text-center">
+             <iframe src="http://duckshoot.toasterltd.com/client/"  width="985" height="500"></iframe>
+         </div>
+     </div>-->
 </div>
 
 
@@ -100,10 +101,13 @@
 <script src="bower_components/flipclock/compiled/flipclock.min.js"></script>
 <script src="bower_components/Chart.js/Chart.js"></script>
 <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
+<script src="bower_components/tweenlite/TweenLite.min.js"></script>
 
 
 <script type="text/javascript">
-    var d = new Date('2015/09/01');
+    var d = new Date('2015/09/01'), s = "06.00 PM";
+    //    d.setTime(s);
+    ;
     var clock = $('#clock').FlipClock(d, {
         clockFace: 'DailyCounter',
         countdown: true
