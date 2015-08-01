@@ -15,7 +15,7 @@
   "dependencies": {
     "jquery.countdown": "~2.0.4",
     "jquery": "~2.1.4",
-    "flipclock": "~0.7.7",
+    "flipclock": "0.7.4",
     "angular": "~1.4.3",
     "bootstrap": "~3.3.5",
     "angular-chart.js": "~0.7.2",

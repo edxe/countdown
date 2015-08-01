@@ -21,10 +21,14 @@
         .container {
             margin-top: 7%;
         }
+
+
     </style>
 </head>
 <body ng-app="mayhem">
+
 <div class="container" ng-controller="MainController">
+    <!--<div id="circle"></div>-->
     <div class="row">
         <div class="col-lg-1 text-center">
             <div id="pagewrap">
@@ -106,11 +110,11 @@
 
 <script type="text/javascript">
     var d = new Date('2015/09/01'), s = "06.00 PM";
-    //    d.setTime(s);
-    ;
-    var clock = $('#clock').FlipClock(d, {
-        clockFace: 'DailyCounter',
-        countdown: true
+//    console.log(d.getDate())
+    console.log(d.getMilliseconds())
+    var clock = $('#clock').FlipClock( Math.max(d.getTime()/1000 - new Date().getTime()/1000,0) , {
+            clockFace: 'DailyCounter',
+            countdown: true
     });
 </script>
 
