@@ -97,11 +97,16 @@
      </div>-->
 </div>
 
+<audio media-player="bang" autobuffer>
+    <source src="assets/audio/gunSound.ogg" type="audio/ogg">
+</audio>
+
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-resource/angular-resource.js"></script>
 <script src="bower_components/jquery.countdown/dist/jquery.countdown.min.js"></script>
+<script src="bower_components/angular-media-player/dist/angular-media-player.min.js"></script>
 <script src="bower_components/flipclock/compiled/flipclock.min.js"></script>
 <script src="bower_components/Chart.js/Chart.js"></script>
 <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
@@ -122,7 +127,7 @@
     (function () {
 
 
-        angular.module('mayhem', ['chart.js', 'ngResource'])
+        angular.module('mayhem', ['chart.js', 'ngResource','mediaPlayer'])
                 .controller('MainController', function ($scope, JiraService, $interval) {
                     console.log('MainController');
                     $scope.type = 'PolarArea';
@@ -149,6 +154,10 @@
 
                         });
                     }, (1000 * 30));
+
+                    var iterbang= $interval(function () {
+                        $scope.bang.play();
+                    }, (30000 * 60));
 
                 });
 

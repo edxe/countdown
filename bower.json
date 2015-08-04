@@ -20,6 +20,7 @@
     "bootstrap": "~3.3.5",
     "angular-chart.js": "~0.7.2",
     "angular-resource": "~1.4.3",
-    "tweenlite": "~1.11.5"
+    "tweenlite": "~1.11.5",
+    "angular-media-player": "~0.5.8"
   }
 }
