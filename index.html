@@ -101,6 +101,9 @@
     <source src="assets/audio/gunSound.ogg" type="audio/ogg">
 </audio>
 
+<audio media-player="yep" autobuffer>
+    <source src="assets/audio/yepitswood.wav" type="audio/wav">
+</audio>
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <script src="bower_components/angular/angular.min.js"></script>
@@ -156,7 +159,13 @@
                     }, (1000 * 30));
 
                     var iterbang= $interval(function () {
-                        $scope.bang.play();
+                        var rndm = Math.floor((Math.random() * 2) + 1);
+                        if(rndm == 1) {
+                            $scope.bang.play();
+                        }
+                        else {
+                            $scope.yep.play();
+                        }
                     }, (30000 * 60));
 
                 });
